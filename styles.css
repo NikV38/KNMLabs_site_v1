@@ -127,6 +127,79 @@
       inset 0 0 60px rgba(0, 15, 30, 0.4);
   }
   
+  /* Console panel - floating text, no background or borders */
+  #console .panel {
+    border: none;
+    background: transparent;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    box-shadow: none;
+    transition: none;
+  }
+  
+  #console .panel:hover {
+    transform: none;
+    border: none;
+    background: transparent;
+    box-shadow: none;
+  }
+  
+  #console .panel-header .label {
+    border-bottom: none;
+  }
+  
+  #console .hero-top {
+    border-bottom: none;
+  }
+  
+  #console .hero-metric {
+    background: transparent;
+    border-left: none;
+    transition: none;
+  }
+  
+  #console .hero-metric:hover {
+    background: transparent;
+    border-left: none;
+  }
+  
+  #console .btn-primary {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    box-shadow: none;
+    transition: border-color 0.4s ease-out, box-shadow 0.4s ease-out, text-shadow 0.4s ease-out;
+  }
+  
+  #console .btn-primary:hover {
+    background: transparent;
+    color: #ffffff;
+    border-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 
+      0 0 15px rgba(255, 255, 255, 0.2),
+      0 0 30px rgba(255, 255, 255, 0.1),
+      inset 0 0 15px rgba(255, 255, 255, 0.05);
+    text-shadow: 
+      0 0 8px rgba(255, 255, 255, 0.3),
+      0 0 15px rgba(255, 255, 255, 0.15);
+    transform: none;
+  }
+  
+  #console .btn-primary.is-hovered {
+    background: transparent;
+    color: #ffffff;
+    border-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 
+      0 0 15px rgba(255, 255, 255, 0.2),
+      0 0 30px rgba(255, 255, 255, 0.1),
+      inset 0 0 15px rgba(255, 255, 255, 0.05);
+    text-shadow: 
+      0 0 8px rgba(255, 255, 255, 0.3),
+      0 0 15px rgba(255, 255, 255, 0.15);
+    transform: none;
+  }
+  
   .panel-header {
     margin-bottom: calc(var(--spacing) * 2);
   }
@@ -184,10 +257,36 @@
   
   /* Hero */
   
+  .hero-top {
+    text-align: center;
+    margin-bottom: calc(var(--spacing) * 6);
+    padding-bottom: calc(var(--spacing) * 4);
+    border-bottom: 1px solid var(--border);
+  }
+  
+  .hero-title {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 500;
+    margin-bottom: calc(var(--spacing) * 2);
+    background: linear-gradient(135deg, var(--text) 0%, var(--text-secondary) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: 0.1em;
+  }
+  
+  .hero-tagline {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    margin-bottom: calc(var(--spacing) * 3);
+    margin-top: 0;
+  }
+  
   .hero-grid {
     display: grid;
-    grid-template-columns: 1.2fr 1.2fr 1fr;
-    gap: calc(var(--spacing) * 3);
+    grid-template-columns: 1fr 1fr;
+    gap: calc(var(--spacing) * 4);
+    margin-top: calc(var(--spacing) * 4);
   }
   
   @media (max-width: 900px) {
@@ -229,30 +328,17 @@
     margin-top: calc(var(--spacing) * 0.5);
   }
   
-  .hero-bottom {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: calc(var(--spacing) * 2);
-    margin-top: calc(var(--spacing) * 3);
-    padding-top: calc(var(--spacing) * 2);
+  .telemetry-section {
+    margin-top: calc(var(--spacing) * 4);
+    padding-top: calc(var(--spacing) * 4);
     border-top: 1px solid var(--border);
-    font-size: 0.8rem;
   }
   
   .hero-cta {
-    text-align: right;
-  }
-  
-  @media (max-width: 640px) {
-    .hero-bottom {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-  
-    .hero-cta {
-      text-align: left;
-    }
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   
   .btn-primary {
@@ -273,7 +359,7 @@
       inset 0 1px 0 rgba(255, 255, 255, 0.05);
   }
   
-  .btn-primary:hover {
+  .btn-primary:hover:not(#console .btn-primary) {
     background: var(--text);
     color: var(--bg);
     border-color: var(--text);
@@ -570,7 +656,7 @@
     inset 0 1px 0 rgba(255, 255, 255, 0.05);
 }
 
-.btn-primary.is-hovered {
+.btn-primary.is-hovered:not(#console .btn-primary) {
   background: var(--text);
   color: var(--bg);
   border-color: var(--text);
