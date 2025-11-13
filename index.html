@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>KNM Labs - Systems built to stay online</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Optional: IBM Plex Mono from Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Main stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page">
+    <header class="top-nav">
+      <div class="logo">KNM LABS</div>
+      <nav class="nav-links">
+        <a href="#console">Console</a>
+        <a href="#capabilities">Capabilities</a>
+        <a href="#team">Team</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <!-- Hero / Console -->
+    <section id="console">
+      <div class="panel">
+        <div class="panel-header">
+          <span class="label">Console / Live status</span>
+        </div>
+
+        <div class="hero-grid">
+          <div>
+            <div class="label">Node</div>
+            <div class="hero-node-title">KNM LABS</div>
+            <p>Independent software engineering studio</p>
+            <p>We design, build, and maintain systems</p>
+          </div>
+
+          <div>
+            <div class="label">Operating mode</div>
+            <p>We design, build, and maintain systems</p>
+            <p>Our focus is simple: reliable software that does exactly 
+                what it is supposed to do.
+                
+                We work closely with founders and technical teams to turn 
+                uncertain ideas into stable, deployable systems with predictable 
+                operation and long-term maintainability.</p>
+          </div>
+
+          <div>
+            <div class="label">Telemetry</div>
+
+            <div class="hero-metric">
+              <div class="hero-metric-value">14-day</div>
+              <div class="hero-metric-meta">Avg cycle from spec to MVP</div>
+            </div>
+
+            <div class="hero-metric">
+              <div class="hero-metric-value">4</div>
+              <div class="hero-metric-meta">Internal systems active</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-bottom">
+          <div>
+            <div class="label">Status</div>
+            <div>Accepting one new project slot for Q4 2025.</div>
+          </div>
+          <div class="hero-cta">
+            <button class="btn-primary" id="hero-cta-btn">Open project ticket</button>
+            <div class="btn-note">Average response time under 24 hours.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Capabilities -->
+    <section id="capabilities">
+      <h2>Capabilities</h2>
+      <div class="panel">
+        <div class="panel-header">
+          <span class="label">Scope of work</span>
+        </div>
+
+        <div class="capabilities-grid">
+          <div>
+            <div class="label">Product</div>
+            <ul class="cap-list">
+              <li>Custom web applications</li>
+              <li>Internal tools and dashboards</li>
+              <li>API design and integration</li>
+              <li>Workflow automation</li>
+            </ul>
+          </div>
+
+          <div>
+            <div class="label">Systems</div>
+            <ul class="cap-list">
+              <li>Scalable backend services</li>
+              <li>Event driven architectures</li>
+              <li>Data pipelines and ETL</li>
+              <li>Monitoring and observability</li>
+            </ul>
+          </div>
+
+          <div>
+            <div class="label">Support</div>
+            <ul class="cap-list">
+              <li>Technical audits</li>
+              <li>Performance tuning</li>
+              <li>Rescue of legacy codebases</li>
+              <li>Long term maintenance</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team -->
+    <section id="team">
+      <h2>Team</h2>
+      <div class="panel">
+        <div class="panel-header">
+          <span class="label">Core Team</span>
+        </div>
+
+        <div class="team-grid">
+          <div class="team-card">
+            <div class="label">CRO</div>
+            <div class="team-name">Kart</div>
+            <div class="team-role">Operations</div>
+            <p>Runs the show, keeps the ship sailing</p>
+            <p>Keeps the team on track and on time</p>
+          </div>
+
+          <div class="team-card">
+            <div class="label">CEO</div>
+            <div class="team-name">Nick</div>
+            <div class="team-role">Project Management</div>
+            <p>Turns specs into clear plans</p>
+            <p>Frontend and backend developer</p>
+          </div>
+
+          <div class="team-card">
+            <div class="label">CTO</div>
+            <div class="team-name">Mack</div>
+            <div class="team-role">DevOps</div>
+            <p>Builds pipelines and analytics layers</p>
+            <p>Owns codebases and keeps them running</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <h2>Contact</h2>
+      <div class="panel">
+        <div class="panel-header">
+          <span class="label">Open project ticket</span>
+        </div>
+
+        <div class="contact-layout">
+          <div class="contact-text">
+            <p>Tell us what you need built and your timeline.</p>
+            <p></p>We prefer clear constraints over long decks.</p>
+            <p>New project budget starts at $2000 USD.</p>
+          </div>
+
+          <form class="contact-form">
+            <div class="field">
+              <label for="company">Company / Project</label>
+              <input id="company" type="text" name="company" required>
+            </div>
+
+            <div class="field">
+              <label for="work">Work needed</label>
+              <textarea id="work" name="work" placeholder='Example: "Internal dashboard for operations, read only to start."' required></textarea>
+            </div>
+
+            <div class="field">
+              <label for="email">Contact email</label>
+              <input id="email" type="email" name="email" required>
+            </div>
+
+            <div>
+              <button class="btn-primary" type="submit">Send request</button>
+              <div class="btn-note">Response within 24 hours.</div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div>© KNM Labs</div>
+      <div>Systems built to stay online.</div>
+    </footer>
+  </div>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
