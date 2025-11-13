@@ -282,23 +282,6 @@
     margin-top: 0;
   }
   
-  .hero-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: calc(var(--spacing) * 4);
-    margin-top: calc(var(--spacing) * 4);
-  }
-  
-  @media (max-width: 900px) {
-    .hero-grid {
-      grid-template-columns: 1fr;
-    }
-  }
-  
-  .hero-node-title {
-    font-size: 1.3rem;
-    margin-bottom: calc(var(--spacing) * 1.5);
-  }
   
   .hero-metric {
     margin-bottom: calc(var(--spacing) * 2);
@@ -410,87 +393,6 @@
   .cap-list li:hover {
     color: var(--text);
     transition: color 0.15s ease-out;
-  }
-  
-  /* Work */
-  
-  .work-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: calc(var(--spacing) * 3);
-  }
-  
-  @media (max-width: 1024px) {
-    .work-grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-  
-  @media (max-width: 768px) {
-    .work-grid {
-      grid-template-columns: 1fr;
-    }
-  }
-  
-  .work-card {
-    border: 1px solid var(--border);
-    background: rgba(15, 15, 15, 0.9);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    padding: calc(var(--spacing) * 2);
-    font-size: 0.85rem;
-    box-shadow: 
-      0 2px 4px rgba(0, 0, 0, 0.5),
-      0 1px 2px rgba(0, 0, 0, 0.3),
-      inset 0 1px 0 rgba(255, 255, 255, 0.02);
-    transition: background 0.3s ease-out, border-color 0.15s ease-out, box-shadow 0.15s ease-out, transform 0.15s ease-out;
-  }
-  
-  .work-title {
-    font-size: 1rem;
-    margin: calc(var(--spacing) * 1.5) 0 calc(var(--spacing));
-  }
-  
-  .work-meta-line {
-    color: var(--text-secondary);
-    font-size: 0.8rem;
-    padding: calc(var(--spacing) * 0.5) 0;
-  }
-  
-  /* Process */
-  
-  .process-rows {
-    border-top: 1px solid var(--border);
-    margin-top: calc(var(--spacing) * 2);
-  }
-  
-  .process-row {
-    display: grid;
-    grid-template-columns: 0.6fr 1fr 1fr;
-    gap: calc(var(--spacing) * 3);
-    padding: calc(var(--spacing) * 2) 0;
-    border-bottom: 1px solid var(--border);
-    font-size: 0.85rem;
-  }
-  
-  @media (max-width: 900px) {
-    .process-row {
-      grid-template-columns: 1fr;
-    }
-  }
-  
-  .process-title {
-    font-weight: 500;
-    margin-bottom: calc(var(--spacing));
-  }
-  
-  .process-outputs {
-    color: var(--text-secondary);
-    font-size: 0.8rem;
-  }
-  
-  .process-outputs span {
-    display: block;
   }
   
   /* Team */
@@ -624,7 +526,6 @@
 
 /* default hidden state for scroll reveal */
 .panel,
-.work-card,
 .team-card {
   opacity: 0;
   transform: translateY(12px);
@@ -638,14 +539,12 @@
 
 /* visible once scrolled into view */
 .panel.is-visible,
-.work-card.is-visible,
 .team-card.is-visible {
   opacity: 1;
   transform: translateY(0);
 }
 
 /* hover states driven by JS */
-.work-card.is-hovered,
 .team-card.is-hovered {
   border-color: var(--border-hover);
   background: rgba(20, 20, 20, 0.95);

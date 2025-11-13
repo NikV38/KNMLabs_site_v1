@@ -5,16 +5,15 @@ document.addEventListener("DOMContentLoaded", function () {
   
     // Scroll reveal using IntersectionObserver with staggered animation
     if (!prefersReducedMotion && "IntersectionObserver" in window) {
-      const revealTargets = document.querySelectorAll(".panel, .work-card, .team-card");
+      const revealTargets = document.querySelectorAll(".panel, .team-card");
   
       const observer = new IntersectionObserver(
         (entries, obs) => {
-          entries.forEach((entry, index) => {
+          entries.forEach((entry) => {
             if (entry.isIntersecting) {
-              // Stagger the animations with a delay based on element index within its parent
               const siblings = Array.from(entry.target.parentElement.children);
               const elementIndex = siblings.indexOf(entry.target);
-              const delay = elementIndex * 100; // 100ms stagger
+              const delay = elementIndex * 100;
               
               setTimeout(() => {
                 entry.target.classList.add("is-visible");
@@ -32,14 +31,12 @@ document.addEventListener("DOMContentLoaded", function () {
   
       revealTargets.forEach((el) => observer.observe(el));
     } else {
-      // If reduced motion is preferred or IntersectionObserver is unavailable,
-      // ensure everything is visible without animation.
-      const all = document.querySelectorAll(".panel, .work-card, .team-card");
+      const all = document.querySelectorAll(".panel, .team-card");
       all.forEach((el) => el.classList.add("is-visible"));
     }
   
     // Enhanced hover animations with smooth transitions
-    const hoverTargets = document.querySelectorAll(".work-card, .team-card, .btn-primary");
+    const hoverTargets = document.querySelectorAll(".team-card, .btn-primary");
   
     hoverTargets.forEach((el) => {
       el.addEventListener("mouseenter", () => {
@@ -50,8 +47,8 @@ document.addEventListener("DOMContentLoaded", function () {
         el.classList.remove("is-hovered");
       });
       
-      // Add subtle tilt effect on mouse move for cards
-      if (el.classList.contains("work-card") || el.classList.contains("team-card")) {
+      // Add subtle tilt effect on mouse move for team cards
+      if (el.classList.contains("team-card")) {
         el.addEventListener("mousemove", (e) => {
           if (!el.classList.contains("is-hovered")) return;
           
